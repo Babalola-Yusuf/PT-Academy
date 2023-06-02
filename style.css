@@ -6,7 +6,6 @@
 body{
     background-color: darkslategrey;
 }
-
 .container{
     background-color: skyblue;
     min-height: 15vh;
@@ -92,11 +91,13 @@ nav img{
 }
 
 footer{
+    background-color: darkslategray;
     text-align: center;
     margin-bottom: 30px;
     margin-top: -50px;
     color: white;
 }
+
 
 /* Styles for screens larger than 768px */
 @media screen and (min-width: 768px) {

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding a website with Abigail</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 
     <style>
 
@@ -27,30 +30,34 @@
        }
 
        .programs{
-        height: 1000px;
+        width: 100%;
         flex-direction: column;
         display: flex;
-        background-color: gainsboro;
+        background-color: rgb(236, 235, 235);
+        padding-bottom: 50px;
        } 
 
        .prog{
         display: flex;
-        height: 50%;
+        gap: 20px;
+        padding: 10px;
+        justify-content: center;      
+        align-items: flex-start;  
+        width: 100%;
+        box-sizing: border-box;
        }
 
        .details{
-        padding: 30px;
+        padding: 0px;
         float: left;
-        width: 45%;
+        width: 50%;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin-right: 20px;
         font-size: 20px;
        }
-
-       form{
-        flex-direction: column;
+       #table{
+        width: 50%;
        }
-
       /* label{
         justify-content: left;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -61,14 +68,18 @@
        input{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 20px;
+        padding: 6px;
         border-left: 0px;
         border-right: 0px;
         border-width: 0px;
-        margin-left: 5px;
-        width: 90%;
-        height: 55px;
+        margin-bottom: 0px;
+        width: 60%;
         border-radius: 10px;
-        float: right;
+       }
+
+       label{
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
        }
 
        ::placeholder{
@@ -76,11 +87,38 @@
         
        }
 
-       .sub{
-        width: 95%;
-        border-radius: 50px;
-        font-size: medium;
+       
+       table,th,td{
+        border-right: none;
+        border-left: none;
        }
+
+       .flex{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+       }
+
+       .button{
+        height: 50px; font-weight: 900; background-color: darkslategray; width: 60%; color: rgb(245, 245, 247); cursor: pointer; 
+       }
+       .button:hover{
+        background-color: rgb(87, 151, 151);
+       }
+       @media screen and (max-width: 767px) {
+        .prog{
+            flex-direction: column;
+    }
+        .details{
+            width: 100%;
+        }
+
+        #table{
+            width: 100%;
+        }
+  }
     </style>
 </head>
 <body>
@@ -94,9 +132,10 @@
                     <li><a href="ourprograms.html">Our Courses</a></li>
                     <li><a href="ebooks.html">Ebooks And Resources</a></li>
                     <li><a href="applynow.html">Apply Now</a></li>
-                     </ul>
+                </ul>
             </div>
         </nav>
+        <span class="material-icons-outlined">menu</span>
     </div>
 
             <section class="header">
@@ -111,10 +150,15 @@
             <div class="programs">
                 <br><br><br><br><h1>APPLY NOW...</h1>
                 <a style="color: black; text-align: justify; margin: 20px; font-size: x-large;"> Dear prospective student with PT Academy, we promise you an excellent service delivery and we are optimistic that you are going to have an impactful and amazing journey in our courses with our competent and exceptional tutors. Kindly reach out to the academy through the following media;</a><br><br>
+
                 <div class="prog">
-                    <div class="details">
-                        <table border="1px" style="height: 350px; width: 400px; text-align: center; border-radius: 20px;">
-                            <th>Information</th> <th>Details</th>
+
+                    <div class="details" >
+                        <table border-width ="1px" style="height: 350px; width: 100%; text-align: center; border-radius: 20px; border-style: solid; border-collapse: collapse;">
+                            <tr style="background-color: darkslategray; color: white;">
+                                <th>Information</th> <th>Details</th>
+                            </tr>
+                            
                             <tr>
                                 <td>WhatsApp and Calls</td> <td>+2347030625352</td>
                             </tr>
@@ -142,35 +186,61 @@
                         </table>
                     </div>
                     <div id="table">
-                        <form><br><br>
-                            <label for="fname"></label>
-                            <input type="text" id="fname" name="name" placeholder="First Name" required>
-                            <br><br><br><br>
-                            <label for="lname"></label> <input type="text" id="name" name="name" placeholder="Last Name" required>
-                            <br><br><br><br>
-                            <label for="phone"></label>
-                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-                            <br><br><br><br>
-                            <label for="email"></label>
-                            <input type="email" id="email" name="email" placeholder="Email Address" required>
-                            <br><br><br><br>
-                            <label for="dob"></label>
-                            <input type="text" id="age" name="age" placeholder="Age" required>
-                            <br><br><br><br>
-                            <label for="pfd"></label>
-                            <input type="text" id="pfd" name="pfd" placeholder="preferred course" required>
-                            <br><br><br><br><br>
-                            <div class="sub">
-                            <input type="submit" style="height: 50px; font-weight: 900; background-color: darkslategray; width: 90%; color: rgb(245, 245, 247);" value=" S U B M I T "> <br><br><br>
-                        </div>
+                        <form action="https://formsubmit.co/gaileoacademy@gmail.com" method="POST"  style="width: 100%;">
+                            <div class="flex">
+                                <label for="fname">First Name:</label> <input type="text" id="fname" name="First Name" placeholder="First Name" required>
+                            </div>
+                            <div class="flex">
+                                <label for="lname">Last Name:</label> <input type="text" id="lname" name="Last Name" placeholder="Last Name" required>
+                            </div>
+
+                            <div class="flex">
+                                <label for="phone"> Phone:</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="flex">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            <input type="hidden" name="_autoresponse" value="Dear Babalola,
+Your email has been received, and Gaileo Academy welcomes you to her upcoming web development classes. Our seasoned and competent tutors are excited and look forward to having you in the class.
+
+What you should know about Gaileo Academy.
+1. The team leader is Io a tech instructor to Canadian black kids in STEM. And she has sourced for the best tutors so that the academy can graduate the best students.
+
+2. At Gaileo academy, no one is a slow learner, rather we all have our different learning speed. The academy has a teaching pattern to every learning speed.
+
+3. The academy will teach her graduands how to apply for remote jobs on upwork, and how to open and have an active par account.
+
+
+
+To be a student of web development at Gaileo Academy, kindly pay your training fee and send a screenshot after payment has been made to the email address or over WhatsApp.
+07030625352 (WhatsApp on
+For further questions, kindly feel free to contact us.
+We look forward to having you on board.
+
+Gaileo Academy
+The management
+">
+                            <div class="flex">
+                                <label for="dob">Date of Birth:</label>
+                                <input type="date" id="age" name="age" placeholder="Age" required>
+                            </div>
+                            <div class="flex">
+                                <label for="pfd">preferred course:</label>
+                                <input type="text" id="pfd" name="preferred course" placeholder="preferred course" required>
+                            </div>
+                            <div class="flex" style="display: flex; justify-content: center;">
+                                <input type="submit" value=" SUBMIT " class="button">     
+                            </div>
                         </form>
                     </div>
                     </div>
                     </div>
                     </section>
-           
-                    <br><br><br><br><br><br>
-                    <footer id="footer">
+
+         <footer id="footer" style="margin-bottom: 0px;
+                    margin-top: 0px; padding: 20px; ">
                         <a><b>© 2023 PT Academy.  All rights reserved</b></a>
                     </footer>
 </body>
