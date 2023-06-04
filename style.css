@@ -8,7 +8,7 @@ body{
 }
 .container{
     background-color: skyblue;
-    min-height: 15vh;
+    min-height: 10vh;
     margin: 0 auto;
     padding: 10px;
 
@@ -17,6 +17,10 @@ body{
 video{
   width: 70%;
   height: 35%;
+}
+
+.container{
+  padding: 0;
 }
 
 .header{
@@ -32,30 +36,60 @@ nav{
   display: flex;  
   padding: 0.5% 0.8% 0.1%;
   justify-content: space-between;
+  align-items: center;
 }
 
-nav img{
+i:hover{
+  color: white;
+  cursor: pointer;
+}
+/* nav img{
     width: 100px;
     margin-top: -5px;
     height: 100px;
+} */
 
+.logo-wrapper{
+  position: relative;
+  height: 45px;
+  width: 45px;
+  overflow: hidden;
 }
-.nav-links{
+nav img{
+  position: absolute;
+  left: -8px;
+  top: -5px;
+  height: 70px;
+  width: 60px;
+  background-size: auto;
+}
+.container i{
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+/* .nav-links{
   flex: 1;
   text-align: right;
 }
-    
+ */  
+nav ul{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 .nav a{
     list-style: none;
     text-decoration: none;
-    margin-top: 20px;
   }
   
   .nav li{
     list-style: none;
     text-decoration: none;
     display: inline-flex;
-    padding: 30px;
+    padding: 0px;
     text-align: right;
   }
 
