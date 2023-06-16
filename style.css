@@ -31,7 +31,10 @@ video{
     background-size: cover;
     position: relative;
 }
-
+.header .text-bg p{
+  text-align: center;
+  color: yellowgreen;
+}
 nav{
   display: flex;  
   padding: 10px;
@@ -40,8 +43,11 @@ nav{
   background-color: skyblue;
 }
 
-i:hover{
+nav a:hover{
   color: white;
+}
+a:hover{
+  color: yellowgreen;
   cursor: pointer;
 }
 /* nav img{
@@ -129,9 +135,8 @@ nav ul{
 footer{
     background-color: darkslategray;
     text-align: center;
-    position: absolute;
-    margin-top: 10px;
-    bottom: 0;
+/*     position: absolute; */
+    margin-top: 0px;
     color: white;
     width: 100%;
     padding: 10px;
