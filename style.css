@@ -9,14 +9,7 @@ body{
     position: relative;
     
 }
-/* .container{
-    background-color: skyblue;
-    min-height: 10vh;
-    margin: 0 auto;
-    padding: 10px; 
 
-}
- */
 video{
   width: 70%;
   height: 35%;
@@ -131,6 +124,25 @@ nav ul{
     font-family: fantasy;
     color: rgb(16, 16, 222);
 }
+
+.grid{
+  display: flex;
+  flex-direction: column;
+  width: 30%px;
+  margin: 10px;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 10px;
+ }
+ 
+ .grid img{
+  margin-bottom: 10px ;
+  margin-top: 10px ;
+ }
+ .prog{
+  display: grid;
+  grid-template-columns:repeat(3, 2fr) ;
+ }
 
 footer{
     background-color: darkslategray;
