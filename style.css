@@ -24,9 +24,19 @@ video{
     background-size: cover;
     position: relative;
 }
+.header .text-bg{
+  width: 43%;
+  margin-top: 10px;
+  padding-right: 20px;
+}
+.header .text-bg h3{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
 .header .text-bg p{
   text-align: center;
   color: yellowgreen;
+
 }
 nav{
   display: flex;  
@@ -166,6 +176,10 @@ footer{
     .prog{
       grid-template-columns:repeat(2, 3fr) ;
      }
+     .header .text-bg h3{
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
   }
   /* Styles for screens smaller than 768px */
   @media screen and (max-width: 767px) {
