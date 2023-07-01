@@ -15,7 +15,6 @@ video{
   height: 35%;
 }
 
-
 .header{
     min-height: 60vh;
     width: 100%;
@@ -44,6 +43,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   background-color: skyblue;
+  box-sizing: content-box;
 }
 
 nav a:hover{
@@ -75,9 +75,7 @@ nav img{
   background-size: auto;
 }
 .container i{
-  position: absolute;
-  right: 0;
-  top: 10px;
+ display: none;
 }
 
 /* .nav-links{
@@ -87,10 +85,12 @@ nav img{
  */  
 nav ul{
   display: flex;
+  position: relative;
   gap: 20px;
   justify-content: center;
   align-items: center;
 }
+
 .nav a{
     list-style: none;
     text-decoration: none;
@@ -104,9 +104,9 @@ nav ul{
     text-align: right;
   }
 
-.nav-links ul li::after{
+.nav ul li::after{
     transition: 0.5s;
-    background: #f456f4;
+    color: #f456f4;
     height: 3px;
 }
 
@@ -189,6 +189,7 @@ footer{
     .coding img{
       width: 80%;
      }
+    
   }
   
   @media screen and (max-width: 480px) {
@@ -201,5 +202,35 @@ footer{
      .prog{
       grid-template-columns:repeat(1, 6fr) ;
      }
+
+     .container i{
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 25px;
+      cursor: pointer;
+      font-size: larger;
+    }
+
+     .nav ul{
+      display: none;
+     }
+     .nav.active ul{
+      position: absolute;
+      top: 80px;
+      right: 5%;
+      display: flex;
+      flex-direction: column;
+      background-color: skyblue;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 18px;
+      width: 90%;
+      z-index: 1 ;
+    }
+    .nav.active ul li,a{
+      margin-bottom: 15px;
+      color: #000;
+    }
   }
   
